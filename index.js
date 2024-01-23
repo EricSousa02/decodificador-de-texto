@@ -1,3 +1,14 @@
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element && isMobile()) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function isMobile() {
+  return window.innerWidth <= 768; 
+}
+
 function encriptar() {
   let texto = document.getElementById("texto").value;
   let tituloMensagem = document.getElementById("titulo-mensagem");
@@ -18,11 +29,13 @@ function encriptar() {
     document.getElementById("imagem").classList.add("hidden");
     document.getElementById("mensagem-criptografada").classList.add("hidden");
     document.getElementById("resultado").classList.remove("hidden");
+
+    scrollToElement("card");
   } else {
     imagem.src = "./img/imagem.png";
     tituloMensagem.textContent = "Nenhuma mensagem encontrada";
     paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar.";
-    swal("Ooops!", "Você deve inserir um texto", "warning");
+    swal("Ooops!", "Você deve inserir um texto para criptografar", "warning");
   }
 }
 
@@ -40,17 +53,16 @@ function desencriptar() {
     .replace(/ufat/gi, "u");
 
   if (textoResultado.length !== 0) {
+    
     document.getElementById("texto").value = textoCifrado;
     document.getElementById("textoResultado").value = "";
 
-    document.getElementById("imagem").classList.remove("hidden");
-    document.getElementById("resultado").classList.add("hidden");
-    document.getElementById("mensagem-criptografada").classList.remove("hidden");
+    scrollToElement("main");
   } else {
     imagem.src = "./img/imagem.png";
     tituloMensagem.textContent = "Nenhuma mensagem encontrada";
     paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar.";
-    swal("Ooops!", "Você deve inserir um texto", "warning");
+    swal("Ooops!", "Você deve inserir um texto para descriptografar", "warning");
   }
 }
 

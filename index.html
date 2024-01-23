@@ -11,9 +11,9 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
-<body>
+<body id="main">
     <img src="img/Frame 6.png" alt="Alura Icon" class="alura" />
-    <section class="container">
+    <section class="container" >
 
 
         <div class="main">
@@ -24,25 +24,31 @@
                 <img src="img/Frame 1.png" alt="" id="regras" />
             </div>
             <div class="botoes">
-                <button class="btn-criptografar" type="button" onclick="encriptar()">
-                    Criptografar
-                </button>
-                <button class="btn-descriptografar" onclick="desencriptar()">Descriptografar</button>
+ 
+                    <button class="btn-criptografar" type="button" onclick="encriptar()">
+                        Criptografar
+                    </button>
+
+  
+                    <button class="btn-descriptografar" onclick="desencriptar()">
+                        Descriptografar
+                    </button>
+
             </div>
 
         </div>
 
 
-        <div class="card">
-            
-            <img src="img/imagem.png" alt="" id="imagem" />
-            <div class="mensagem-criptografada" id="mensagem-criptografada">
-                <h2 id="titulo-mensagem">Nenhuma mensagem encontrada</h2>
-                <p id="paragrafo">
-                    Digite um texto que você deseja criptografar ou descriptografar.
-                </p>
+        <div class="card" id="card">
+            <div class="card-item">
+                <div class="mensagem-criptografada" id="mensagem-criptografada">
+                    <img src="img/imagem.png" alt="" id="imagem" />
+                    <h2 id="titulo-mensagem">Nenhuma mensagem encontrada</h2>
+                    <p id="paragrafo">
+                        Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
+                </div>
             </div>
-
             <div class="resultado hidden" id="resultado">
 
                 <textarea name="textoResultado" class="textoResultado" id="textoResultado" cols="30" rows="10"
@@ -55,6 +61,10 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>Desenvolvido por <a href="https://github.com/EricSousa02" target="_blank">Eric Sousa</a>, 2024</p>
+    </footer>
 </body>
 <script src="index.js"></script>
 

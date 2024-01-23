@@ -3,9 +3,45 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body{
   background: #f3f5fc;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #D8DFE8;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #343a40;
+  border-radius: 50px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #343a40;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  background-color: #343a40;
+  display: grid;
+  place-items: center;
+}
+
+.footer p , a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #D8DFE8;
 }
 
 .hidden{
@@ -61,13 +97,17 @@ body{
   z-index: 1;
 }
 
-.card img {
+.card .card-item .mensagem-criptografada img {
   position: relative;
   width: 18.75rem;
   height: 18.75rem;
   margin: 0 auto;
-  top: 10%;
-  left: 13%;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .resultado{
@@ -225,7 +265,6 @@ body{
   gap: 16px;
   position: absolute;
   width: 100%;
-  top: 65%;
   text-align: center;
 }
 
@@ -262,17 +301,21 @@ body{
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 30px;
+    height: auto;
   }
 
   .main {
     width: 100%;
+    position: relative;
+    height: 100vh;
   }
 
   .texto {
+    position: relative;
     width: 80%;
-    height: 60%;
+    height: 70%;
     left: 10%;
     top: 5%;
   }
@@ -280,7 +323,7 @@ body{
   .regras {
     width: 80%;
     left: 10%;
-    top: 67%;
+    top: 77%;
   }
 
   .regras p {
@@ -290,7 +333,7 @@ body{
   .botoes {
     width: 80%;
     left: 10%;
-    top: 70%;
+    top: 80%;
     display: flex;
     flex-direction: column;
   }
@@ -306,8 +349,8 @@ body{
   .card {
     position: relative; 
     width: 80%;
-    height: auto;
-    top: 90%; 
+    height: 75vh;
+    
   }
 
   .mensagem-criptografada {
