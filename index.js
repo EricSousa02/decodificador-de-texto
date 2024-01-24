@@ -9,7 +9,7 @@ function isMobile() {
   return window.innerWidth <= 1000; 
 }
 
-function encriptar() {
+function criptografar() {
   let texto = document.getElementById("texto").value;
   let tituloMensagem = document.getElementById("titulo-mensagem");
   let paragrafo = document.getElementById("paragrafo");
@@ -40,7 +40,7 @@ function encriptar() {
   }
 }
 
-function desencriptar() {
+function descriptografar() {
   let textoResultado = document.getElementById("textoResultado").value;
   let tituloMensagem = document.getElementById("titulo-mensagem");
   let paragrafo = document.getElementById("paragrafo");
