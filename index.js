@@ -6,7 +6,7 @@ function scrollToElement(elementId) {
 }
 
 function isMobile() {
-  return window.innerWidth <= 768; 
+  return window.innerWidth <= 1000; 
 }
 
 function encriptar() {
@@ -35,6 +35,7 @@ function encriptar() {
     imagem.src = "./img/imagem.png";
     tituloMensagem.textContent = "Nenhuma mensagem encontrada";
     paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar.";
+    scrollToElement("main");
     swal("Ooops!", "Você deve inserir um texto para criptografar", "warning");
   }
 }
@@ -62,6 +63,7 @@ function desencriptar() {
     imagem.src = "./img/imagem.png";
     tituloMensagem.textContent = "Nenhuma mensagem encontrada";
     paragrafo.textContent = "Digite um texto que você deseja criptografar ou descriptografar.";
+    scrollToElement("card");
     swal("Ooops!", "Você deve inserir um texto para descriptografar", "warning");
   }
 }
